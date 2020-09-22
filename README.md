@@ -13,7 +13,7 @@ This is super useful for customers who may be heavily using Flow and Lightning W
 
 # Running The Baked App
 
-1. Deploy the files in the `server` directory to your Salesforce org using `sfdx force:source:deploy -u <your dev org user name>  --sourcepath /HybridLwcTemplate/server/force-app/main/default/`
+1. Deploy the files in the `server` directory to your Salesforce org using `sfdx force:source:deploy -u <your dev org user name>  --sourcepath /mobileFlowEmbedTest/server/force-app/main/default/`
 1. Run the .workspace file in `mobileFlowEmbedTest/platforms/ios`
 2. Change the build target in the selector to the right of the play / stop buttons on XCode to `mobileFlowEmbedTest`
 3. Build and see your magic app
