@@ -14,7 +14,7 @@ This is super useful for customers who may be heavily using Flow and Lightning W
 # Running The Baked App
 
 1. Run the .workspace file in `mobileFlowEmbedTest/platforms/ios`
-2. Change the build target in the selector to the right of the play / stop buttons on XCode to `yourAppName`
+2. Change the build target in the selector to the right of the play / stop buttons on XCode to `mobileFlowEmbedTest`
 3. Build and see your magic app
 
 # Instructions To Create Your Own App With This Repo
