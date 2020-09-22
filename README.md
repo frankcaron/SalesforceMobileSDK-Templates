@@ -1,5 +1,4 @@
-![Build Status](https://forcedotcom.github.io/SalesforceMobileSDK-TestResults/Templates-results/dev/latest/buildstatus.svg)
 
-# SalesforceMobileSDK-Templates
+# Salesforce Mobile SDK - LWC Flow Example
 
-Use the forceios/forcedroid/forcehybrid/forcereact or sfdx with sfdx-mobilesdk-plugin to create a new application based on one of the template.
+This repository contains a working build artifact of a Hybrid Remote mobile app built with the new Lightning Web Component embed technique to leverage LWC in the context of the Mobile SDK. In particular, this example has been built to show how a Lightning Flow can be embedded in a mobile app via the SDK.
