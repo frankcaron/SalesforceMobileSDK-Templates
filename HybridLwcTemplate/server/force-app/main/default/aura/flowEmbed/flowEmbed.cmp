@@ -1,0 +1,12 @@
+<aura:component access="global" implements="flexipage:availableForAllPageTypes">
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+    <lightning:card>
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:connected_apps" size="small"/>
+            My Embedded Flow
+        </aura:set>
+        <lightning:flow aura:id="myEmbeddedFlow" />
+    </lightning:card>
+    
+</aura:component>
