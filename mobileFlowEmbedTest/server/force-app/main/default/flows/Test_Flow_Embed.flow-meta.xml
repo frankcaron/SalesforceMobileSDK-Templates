@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>A sample flow to test embedding a Flow in the Mobile SDK.</description>
+    <interviewLabel>Test Flow Embed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Test Flow Embed</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>SickBo</name>
+        <label>SickBro</label>
+        <locationX>460</locationX>
+        <locationY>69</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>TestFlow</name>
+            <fieldText>&lt;p&gt;Hello from the magical flow that is embedded in an Aura Component which is embedded in a Visualforce page that also has a Lightning Web Component embedded alongside it, all of which is embedded in the Mobile SDK circa the most recent Winter &apos;21 release.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>SickRight</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <numberValue>11.0</numberValue>
+            </defaultValue>
+            <fieldText>How sick is this on a scale from 1-10?</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+            <scale>0</scale>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>SickBo</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

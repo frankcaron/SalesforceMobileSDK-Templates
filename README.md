@@ -9,15 +9,22 @@ This repository contains a working build artifact of a Hybrid Remote mobile app 
 * Node and npm
 * Cocoa Pods
 
-# Installation Instructions
+# Running The Baked App
 
-1. Clone the repo
+1. Run the .workspace file in `mobileFlowEmbedTest/platforms/ios`
+2. Change the build target in the selector to the right of the play / stop buttons on XCode to `yourAppName`
+3. Build and see your magic app
+
+
+# Instructions To Create Your Own App With This Repo
+
+1. Fork the repo
+2. Delete the `mobileFlowEmbedTest` folder
+2. Run `npm install` from the root repo
+2. Run `sfdx mobilesdk:hybrid:createwithtemplate -p ios -r HybridLwcTemplate -n yourAppName -k com.yourCompany.yourApp -o yourOrganization`
 2. With SFDX, authorize your desired dev org.
 3. Deploy the files in the `server` directory to your Salesforce org using `sfdx force:source:deploy -u <your dev org user name>  --sourcepath /HybridLwcTemplate/server/force-app/main/default/`
-4. Run `npm install` from the root repo
-5. Run `sfdx mobilesdk:hybrid:createwithtemplate -p ios -r HybridLwcTemplate -n yourAppName -k com.yourCompany.yourApp -o yourOrganization`
-6. CD into the `mobileLWCFlow/platform/ios` folder
+6. CD into the `/platform/ios` folder of your yourAppName directory
 7. Run `pod install` 
-8. Open the workspace file `mobileLWCFlow.xcworkspace`
-9. Change the build target in the selector to the right of the play / stop buttons on XCode to `mobileLWCFlow`
-10. Build and see your magic app
+8. Open the workspace file in yourAppName directory
+9. Run the app
