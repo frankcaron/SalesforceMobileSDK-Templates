@@ -12,10 +12,12 @@ This repository contains a working build artifact of a Hybrid Remote mobile app 
 # Installation Instructions
 
 1. Clone the repo
-2. Deploy the files in the `server` directory to your Salesforce org. This includes a Visualforce page which embeds the desired components.
-3. Run `npm install` from the root repo
-4. CD into the `mobileLWCFlow/platform/ios` folder
-5. Run `pod install` 
-6. Open the workspace file `mobileLWCFlow.xcworkspace`
-7. Change the build target in the selector to the right of the play / stop buttons on XCode to `mobileLWCFlow`
-8. Build
+2. With SFDX, authorize your desired dev org.
+3. Deploy the files in the `server` directory to your Salesforce org using `sfdx force:source:deploy -u <your dev org user name>  --sourcepath /HybridLwcTemplate/server/force-app/main/default/`
+4. Run `npm install` from the root repo
+5. Run `sfdx mobilesdk:hybrid:createwithtemplate -p ios -r HybridLwcTemplate -n yourAppName -k com.yourCompany.yourApp -o yourOrganization`
+6. CD into the `mobileLWCFlow/platform/ios` folder
+7. Run `pod install` 
+8. Open the workspace file `mobileLWCFlow.xcworkspace`
+9. Change the build target in the selector to the right of the play / stop buttons on XCode to `mobileLWCFlow`
+10. Build and see your magic app
